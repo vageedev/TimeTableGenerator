@@ -30,21 +30,23 @@ public class lecturersPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lecturersPanel = new javax.swing.JPanel();
-        jPanel23_lecturersPanel = new javax.swing.JPanel();
+        jPanel23_23 = new javax.swing.JPanel();
         add_lec = new javax.swing.JButton();
         jLabel67_67 = new javax.swing.JLabel();
-        jLabel27_lecturersPanel = new javax.swing.JLabel();
-        jPanel24_lecturersPanel = new javax.swing.JPanel();
+        jLabel27_27 = new javax.swing.JLabel();
+        jPanel22_22 = new javax.swing.JPanel();
+        jLabel37_37 = new javax.swing.JLabel();
+        jPanel24_24 = new javax.swing.JPanel();
         lec_details = new javax.swing.JButton();
         jLabel66_66 = new javax.swing.JLabel();
-        jLabel24_lecturersPanel = new javax.swing.JLabel();
+        jLabel24_24 = new javax.swing.JLabel();
 
-        lecturersPanel.setBackground(new java.awt.Color(102, 51, 109));
+        lecturersPanel.setBackground(new java.awt.Color(102, 0, 0));
 
-        jPanel23_lecturersPanel.setBackground(new java.awt.Color(137, 14, 137));
-        jPanel23_lecturersPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel23_23.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel23_23.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
 
-        add_lec.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        add_lec.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         add_lec.setText("ADD NEW LECTURER");
         add_lec.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,42 +54,66 @@ public class lecturersPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel27_lecturersPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/timetable/lecturers.png"))); // NOI18N
+        jLabel27_27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/timetable/lecturers.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel23_lecturersPanelLayout = new javax.swing.GroupLayout(jPanel23_lecturersPanel);
-        jPanel23_lecturersPanel.setLayout(jPanel23_lecturersPanelLayout);
-        jPanel23_lecturersPanelLayout.setHorizontalGroup(
-            jPanel23_lecturersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel23_lecturersPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel23_23Layout = new javax.swing.GroupLayout(jPanel23_23);
+        jPanel23_23.setLayout(jPanel23_23Layout);
+        jPanel23_23Layout.setHorizontalGroup(
+            jPanel23_23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel23_23Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel27_lecturersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel27_27, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel67_67)
                 .addGap(88, 88, 88))
-            .addGroup(jPanel23_lecturersPanelLayout.createSequentialGroup()
+            .addGroup(jPanel23_23Layout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addComponent(add_lec)
                 .addContainerGap(65, Short.MAX_VALUE))
         );
-        jPanel23_lecturersPanelLayout.setVerticalGroup(
-            jPanel23_lecturersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23_lecturersPanelLayout.createSequentialGroup()
-                .addGroup(jPanel23_lecturersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel23_lecturersPanelLayout.createSequentialGroup()
+        jPanel23_23Layout.setVerticalGroup(
+            jPanel23_23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23_23Layout.createSequentialGroup()
+                .addGroup(jPanel23_23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel23_23Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addComponent(jLabel67_67, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel23_lecturersPanelLayout.createSequentialGroup()
+                    .addGroup(jPanel23_23Layout.createSequentialGroup()
                         .addGap(65, 65, 65)
-                        .addComponent(jLabel27_lecturersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel27_27, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
                 .addComponent(add_lec)
                 .addGap(53, 53, 53))
         );
 
-        jPanel24_lecturersPanel.setBackground(new java.awt.Color(137, 14, 137));
-        jPanel24_lecturersPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel22_22.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel22_22.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
 
-        lec_details.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel37_37.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel37_37.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel37_37.setText("LECTURERS");
+
+        javax.swing.GroupLayout jPanel22_22Layout = new javax.swing.GroupLayout(jPanel22_22);
+        jPanel22_22.setLayout(jPanel22_22Layout);
+        jPanel22_22Layout.setHorizontalGroup(
+            jPanel22_22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel22_22Layout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addComponent(jLabel37_37)
+                .addContainerGap(88, Short.MAX_VALUE))
+        );
+        jPanel22_22Layout.setVerticalGroup(
+            jPanel22_22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel22_22Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel37_37)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel24_24.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel24_24.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+
+        lec_details.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lec_details.setText("LECTURER DETAILS");
         lec_details.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,29 +121,29 @@ public class lecturersPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel24_lecturersPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/timetable/lecturers.png"))); // NOI18N
+        jLabel24_24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/timetable/lecturers.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel24_lecturersPanelLayout = new javax.swing.GroupLayout(jPanel24_lecturersPanel);
-        jPanel24_lecturersPanel.setLayout(jPanel24_lecturersPanelLayout);
-        jPanel24_lecturersPanelLayout.setHorizontalGroup(
-            jPanel24_lecturersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24_lecturersPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel24_24Layout = new javax.swing.GroupLayout(jPanel24_24);
+        jPanel24_24.setLayout(jPanel24_24Layout);
+        jPanel24_24Layout.setHorizontalGroup(
+            jPanel24_24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24_24Layout.createSequentialGroup()
                 .addContainerGap(81, Short.MAX_VALUE)
-                .addGroup(jPanel24_lecturersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel24_24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lec_details)
-                    .addGroup(jPanel24_lecturersPanelLayout.createSequentialGroup()
+                    .addGroup(jPanel24_24Layout.createSequentialGroup()
                         .addComponent(jLabel66_66)
                         .addGap(28, 28, 28)
-                        .addComponent(jLabel24_lecturersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel24_24, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(66, 66, 66))
         );
-        jPanel24_lecturersPanelLayout.setVerticalGroup(
-            jPanel24_lecturersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel24_lecturersPanelLayout.createSequentialGroup()
+        jPanel24_24Layout.setVerticalGroup(
+            jPanel24_24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel24_24Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addGroup(jPanel24_lecturersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel24_24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel66_66, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24_lecturersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel24_24, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
                 .addComponent(lec_details)
                 .addGap(48, 48, 48))
@@ -128,20 +154,27 @@ public class lecturersPanel extends javax.swing.JPanel {
         lecturersPanelLayout.setHorizontalGroup(
             lecturersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(lecturersPanelLayout.createSequentialGroup()
-                .addGap(371, 371, 371)
-                .addComponent(jPanel23_lecturersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(140, 140, 140)
-                .addComponent(jPanel24_lecturersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(3245, Short.MAX_VALUE))
+                .addGroup(lecturersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(lecturersPanelLayout.createSequentialGroup()
+                        .addGap(530, 530, 530)
+                        .addComponent(jPanel22_22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(lecturersPanelLayout.createSequentialGroup()
+                        .addGap(302, 302, 302)
+                        .addComponent(jPanel23_23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(84, 84, 84)
+                        .addComponent(jPanel24_24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(3353, Short.MAX_VALUE))
         );
         lecturersPanelLayout.setVerticalGroup(
             lecturersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(lecturersPanelLayout.createSequentialGroup()
-                .addGap(224, 224, 224)
+                .addGap(50, 50, 50)
+                .addComponent(jPanel22_22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(111, 111, 111)
                 .addGroup(lecturersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel23_lecturersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel24_lecturersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(218, Short.MAX_VALUE))
+                    .addComponent(jPanel23_23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel24_24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(192, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -151,14 +184,18 @@ public class lecturersPanel extends javax.swing.JPanel {
             .addGap(0, 4450, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(lecturersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 17, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 917, Short.MAX_VALUE)
+            .addGap(0, 890, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(lecturersPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(lecturersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -183,12 +220,14 @@ public class lecturersPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add_lec;
-    private javax.swing.JLabel jLabel24_lecturersPanel;
-    private javax.swing.JLabel jLabel27_lecturersPanel;
+    private javax.swing.JLabel jLabel24_24;
+    private javax.swing.JLabel jLabel27_27;
+    private javax.swing.JLabel jLabel37_37;
     private javax.swing.JLabel jLabel66_66;
     private javax.swing.JLabel jLabel67_67;
-    private javax.swing.JPanel jPanel23_lecturersPanel;
-    private javax.swing.JPanel jPanel24_lecturersPanel;
+    private javax.swing.JPanel jPanel22_22;
+    private javax.swing.JPanel jPanel23_23;
+    private javax.swing.JPanel jPanel24_24;
     private javax.swing.JButton lec_details;
     private javax.swing.JPanel lecturersPanel;
     // End of variables declaration//GEN-END:variables

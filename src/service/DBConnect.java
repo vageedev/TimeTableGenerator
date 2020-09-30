@@ -18,7 +18,7 @@ public class DBConnect {
     
     private static void DBConn() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/timetable", "root", "");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/timetable", "root", "123");
     }
     
     public static void iud(String sql) throws Exception {

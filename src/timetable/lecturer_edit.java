@@ -5,11 +5,7 @@
  */
 package timetable;
 
-import DBconnetions.DBconnect;
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
@@ -20,41 +16,14 @@ import javax.swing.JOptionPane;
 public class lecturer_edit extends javax.swing.JPanel {
 
     Generator generator;
-    Connection con = null;
 
-    String empID;
-    String name;
-    String faculty;
-    String dept;
-    String center;
-    String building;
-    String level;
-    String rank;
+    Connection con = null;
 
     /**
      * Creates new form lecturer_edit
      */
     public lecturer_edit() {
         initComponents();
-        con = DBconnect.connect();
-
-    }
-
-    public lecturer_edit(String empID, String name, String faculty, String dept, String center, String building, String level, String rank) {
-
-        initComponents();
-        con = DBconnect.connect();
-
-        this.empID = empID;
-        this.name = name;
-        this.faculty = faculty;
-        this.dept = dept;
-        this.center = center;
-        this.building = building;
-        this.level = level;
-        this.rank = rank;
-
-        getDetails();
     }
 
     /**
@@ -68,62 +37,84 @@ public class lecturer_edit extends javax.swing.JPanel {
 
         lecturer_edit = new javax.swing.JPanel();
         update_lec = new javax.swing.JButton();
-        jButton15_editlec = new javax.swing.JButton();
-        jPanel35_editlec = new javax.swing.JPanel();
-        jLabel83_editlec = new javax.swing.JLabel();
+        jButton15_15 = new javax.swing.JButton();
+        jPanel26_26 = new javax.swing.JPanel();
+        jLabel78_78 = new javax.swing.JLabel();
+        jPanel35_35 = new javax.swing.JPanel();
+        jLabel83_83 = new javax.swing.JLabel();
         le = new javax.swing.JTextField();
-        jLabel84_editlec = new javax.swing.JLabel();
-        jLabel85_editlec = new javax.swing.JLabel();
-        jLabel86_editlec = new javax.swing.JLabel();
+        jLabel84_84 = new javax.swing.JLabel();
+        jLabel85_85 = new javax.swing.JLabel();
+        jLabel86_86 = new javax.swing.JLabel();
         le1 = new javax.swing.JTextField();
         le2 = new javax.swing.JComboBox<>();
         le3 = new javax.swing.JComboBox<>();
-        jLabel87_editlec = new javax.swing.JLabel();
-        jLabel88_editlec = new javax.swing.JLabel();
-        jLabel89_editlec = new javax.swing.JLabel();
+        jLabel87_87 = new javax.swing.JLabel();
+        jLabel88_88 = new javax.swing.JLabel();
+        jLabel89_89 = new javax.swing.JLabel();
         le4 = new javax.swing.JComboBox<>();
         le5 = new javax.swing.JComboBox<>();
         le6 = new javax.swing.JComboBox<>();
-        jLabel76_editlec = new javax.swing.JLabel();
+        jLabel76_76 = new javax.swing.JLabel();
         le7 = new javax.swing.JTextField();
-        jLabel77_editlec = new javax.swing.JLabel();
-        jButton14_editlec = new javax.swing.JButton();
+        jLabel77_77 = new javax.swing.JLabel();
+        jButton14_14 = new javax.swing.JButton();
         jScrollPane3_3 = new javax.swing.JScrollPane();
-        jTable3_editlec = new javax.swing.JTable();
+        jTable3_3 = new javax.swing.JTable();
 
-        lecturer_edit.setBackground(new java.awt.Color(102, 51, 109));
+        lecturer_edit.setBackground(new java.awt.Color(0, 0, 102));
 
         update_lec.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         update_lec.setText(" Update Details ");
-        update_lec.setBorder(null);
+        update_lec.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         update_lec.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 update_lecActionPerformed(evt);
             }
         });
 
-        jButton15_editlec.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton15_editlec.setText(" Back ");
-        jButton15_editlec.setBorder(null);
-        jButton15_editlec.addActionListener(new java.awt.event.ActionListener() {
+        jButton15_15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton15_15.setText(" Back ");
+        jButton15_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jButton15_15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15_editlecActionPerformed(evt);
+                jButton15_15ActionPerformed(evt);
             }
         });
 
-        jPanel35_editlec.setBackground(new java.awt.Color(137, 14, 137));
-        jPanel35_editlec.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Edit Lecture Details", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 24), new java.awt.Color(255, 255, 255))); // NOI18N
-        jPanel35_editlec.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel26_26.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel26_26.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
 
-        jLabel83_editlec.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel83_editlec.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel83_editlec.setText("Employee ID");
+        jLabel78_78.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel78_78.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel78_78.setText("EDIT LECTURER DETAILS");
+
+        javax.swing.GroupLayout jPanel26_26Layout = new javax.swing.GroupLayout(jPanel26_26);
+        jPanel26_26.setLayout(jPanel26_26Layout);
+        jPanel26_26Layout.setHorizontalGroup(
+            jPanel26_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel26_26Layout.createSequentialGroup()
+                .addContainerGap(43, Short.MAX_VALUE)
+                .addComponent(jLabel78_78)
+                .addGap(39, 39, 39))
+        );
+        jPanel26_26Layout.setVerticalGroup(
+            jPanel26_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel26_26Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel78_78)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel35_35.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel35_35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+
+        jLabel83_83.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel83_83.setText("Employee ID");
 
         le.setEditable(false);
-        le.setBackground(new java.awt.Color(255, 255, 255));
-        le.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        le.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         le.setForeground(new java.awt.Color(102, 102, 102));
-        le.setBorder(null);
         le.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 leActionPerformed(evt);
@@ -135,20 +126,16 @@ public class lecturer_edit extends javax.swing.JPanel {
             }
         });
 
-        jLabel84_editlec.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel84_editlec.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel84_editlec.setText("Name");
+        jLabel84_84.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel84_84.setText("Name");
 
-        jLabel85_editlec.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel85_editlec.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel85_editlec.setText("Faculty");
+        jLabel85_85.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel85_85.setText("Faculty");
 
-        jLabel86_editlec.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel86_editlec.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel86_editlec.setText("Department");
+        jLabel86_86.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel86_86.setText("Department");
 
-        le1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        le1.setBorder(null);
+        le1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         le1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 le1ActionPerformed(evt);
@@ -163,71 +150,60 @@ public class lecturer_edit extends javax.swing.JPanel {
             }
         });
 
-        le2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        le2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         le2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Faculty", "Faculty of Computing", "Faculty of Engineering", "Faculty of Business", "Faculty of Home Science" }));
-        le2.setBorder(null);
 
-        le3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        le3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         le3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Department", "Software Engineering", "Infortmation Technology", "Computer Networks", "Interactive Media", "Civil Engineering", "Mechanical Engineering", "Electronic and Telecommuincation Engineering", "Humanities and Science", "Cyber Securrity", "Information System Engineering", "Mechatronic Engineering" }));
-        le3.setBorder(null);
 
-        jLabel87_editlec.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel87_editlec.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel87_editlec.setText("Center");
+        jLabel87_87.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel87_87.setText("Center");
 
-        jLabel88_editlec.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel88_editlec.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel88_editlec.setText("Building");
+        jLabel88_88.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel88_88.setText("Building");
 
-        jLabel89_editlec.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel89_editlec.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel89_editlec.setText("Level");
+        jLabel89_89.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel89_89.setText("Level");
 
-        le4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        le4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         le4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Center", "Malabe", "Matara", "Kandy", "Jaffna", "Metro", "Kurunegala" }));
-        le4.setBorder(null);
 
-        le5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        le5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         le5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Building", "Main Building", "New Building", "Engeering", "Business", "D-Block" }));
-        le5.setBorder(null);
         le5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 le5ActionPerformed(evt);
             }
         });
 
-        le6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        le6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         le6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Level", "1", "2", "3", "4", "5" }));
-        le6.setBorder(null);
 
-        jLabel76_editlec.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jLabel76_editlec.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel76_editlec.setText("Rank");
+        jLabel76_76.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel76_76.setText("Rank");
 
         le7.setEditable(false);
-        le7.setBackground(new java.awt.Color(255, 255, 255));
-        le7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        le7.setBorder(null);
+        le7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         le7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 le7ActionPerformed(evt);
             }
         });
 
-        jLabel77_editlec.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel77_editlec.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel77_editlec.setText("*Level.EmployeeID");
+        jLabel77_77.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel77_77.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel77_77.setText("*Level.EmployeeID");
 
-        jButton14_editlec.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton14_editlec.setText(" Generate ");
-        jButton14_editlec.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton14_editlec.addActionListener(new java.awt.event.ActionListener() {
+        jButton14_14.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jButton14_14.setText(" Generate ");
+        jButton14_14.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton14_14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14_editlecActionPerformed(evt);
+                jButton14_14ActionPerformed(evt);
             }
         });
 
-        jTable3_editlec.setModel(new javax.swing.table.DefaultTableModel(
+        jTable3_3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"Professor", "1"},
                 {"Assistant Professor", "2"},
@@ -241,102 +217,96 @@ public class lecturer_edit extends javax.swing.JPanel {
                 "Category", "Level"
             }
         ));
-        jScrollPane3_3.setViewportView(jTable3_editlec);
+        jScrollPane3_3.setViewportView(jTable3_3);
 
-        javax.swing.GroupLayout jPanel35_editlecLayout = new javax.swing.GroupLayout(jPanel35_editlec);
-        jPanel35_editlec.setLayout(jPanel35_editlecLayout);
-        jPanel35_editlecLayout.setHorizontalGroup(
-            jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel35_editlecLayout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel35_editlecLayout.createSequentialGroup()
-                        .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel35_editlecLayout.createSequentialGroup()
-                                .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel88_editlec)
-                                    .addComponent(jLabel87_editlec)
-                                    .addComponent(jLabel89_editlec))
-                                .addGap(68, 68, 68)
-                                .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(le, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(le5, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(le4, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(le3, javax.swing.GroupLayout.Alignment.LEADING, 0, 1, Short.MAX_VALUE)
-                                        .addComponent(le2, javax.swing.GroupLayout.Alignment.LEADING, 0, 234, Short.MAX_VALUE)
-                                        .addComponent(le1, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(le6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                            .addComponent(jLabel83_editlec))
-                        .addContainerGap(122, Short.MAX_VALUE))
-                    .addGroup(jPanel35_editlecLayout.createSequentialGroup()
-                        .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel86_editlec)
-                            .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel85_editlec)
-                                .addComponent(jLabel84_editlec))
-                            .addComponent(jLabel76_editlec))
-                        .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel35_editlecLayout.createSequentialGroup()
-                                .addGap(53, 53, 53)
-                                .addComponent(jLabel77_editlec, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel35_editlecLayout.createSequentialGroup()
-                                .addGap(47, 47, 47)
-                                .addComponent(le7)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton14_editlec, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33))))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35_editlecLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel35_35Layout = new javax.swing.GroupLayout(jPanel35_35);
+        jPanel35_35.setLayout(jPanel35_35Layout);
+        jPanel35_35Layout.setHorizontalGroup(
+            jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel35_35Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel35_35Layout.createSequentialGroup()
+                        .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35_35Layout.createSequentialGroup()
+                                .addComponent(jLabel83_83)
+                                .addGap(44, 44, 44))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35_35Layout.createSequentialGroup()
+                                .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel86_86)
+                                    .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel85_85)
+                                        .addComponent(jLabel84_84))
+                                    .addComponent(jLabel76_76))
+                                .addGap(47, 47, 47)))
+                        .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel77_77, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel35_35Layout.createSequentialGroup()
+                                .addComponent(le7, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton14_14))))
+                    .addGroup(jPanel35_35Layout.createSequentialGroup()
+                        .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel88_88)
+                            .addComponent(jLabel87_87)
+                            .addComponent(jLabel89_89))
+                        .addGap(68, 68, 68)
+                        .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(le5, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(le4, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(le3, javax.swing.GroupLayout.Alignment.LEADING, 0, 1, Short.MAX_VALUE)
+                            .addComponent(le2, javax.swing.GroupLayout.Alignment.LEADING, 0, 0, Short.MAX_VALUE)
+                            .addComponent(le, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(le1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(le6, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35_35Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane3_3, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(111, 111, 111))
+                .addGap(79, 79, 79))
         );
-        jPanel35_editlecLayout.setVerticalGroup(
-            jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel35_editlecLayout.createSequentialGroup()
+        jPanel35_35Layout.setVerticalGroup(
+            jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel35_35Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(le, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel83_editlec))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel84_editlec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(le1))
-                .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel35_editlecLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel85_editlec))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35_editlecLayout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(le2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(le3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel86_editlec))
-                .addGap(29, 29, 29)
-                .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel87_editlec)
-                    .addComponent(le4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(le, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel83_83))
                 .addGap(37, 37, 37)
-                .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(le5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel88_editlec))
-                .addGap(36, 36, 36)
-                .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(le6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel89_editlec))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                .addComponent(jScrollPane3_3, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel76_editlec, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35_editlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(le7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton14_editlec)))
+                .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(le1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel84_84))
                 .addGap(29, 29, 29)
-                .addComponent(jLabel77_editlec)
-                .addContainerGap())
+                .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(le2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel85_85))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(le3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel86_86))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel87_87)
+                    .addComponent(le4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(le5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel88_88))
+                .addGap(45, 45, 45)
+                .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(le6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel89_89))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(jScrollPane3_3, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel76_76, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35_35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(le7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton14_14)))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel77_77)
+                .addGap(24, 24, 24))
         );
 
         javax.swing.GroupLayout lecturer_editLayout = new javax.swing.GroupLayout(lecturer_edit);
@@ -347,35 +317,50 @@ public class lecturer_edit extends javax.swing.JPanel {
                 .addGroup(lecturer_editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(lecturer_editLayout.createSequentialGroup()
                         .addGap(601, 601, 601)
-                        .addComponent(jButton15_editlec, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton15_15, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
                         .addComponent(update_lec))
                     .addGroup(lecturer_editLayout.createSequentialGroup()
-                        .addGap(408, 408, 408)
-                        .addComponent(jPanel35_editlec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(3594, Short.MAX_VALUE))
+                        .addGap(478, 478, 478)
+                        .addComponent(jPanel35_35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(lecturer_editLayout.createSequentialGroup()
+                        .addGap(521, 521, 521)
+                        .addComponent(jPanel26_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(3500, Short.MAX_VALUE))
         );
         lecturer_editLayout.setVerticalGroup(
             lecturer_editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(lecturer_editLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jPanel35_editlec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jPanel26_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel35_35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(lecturer_editLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton15_editlec, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton15_15, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(update_lec, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lecturer_edit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 4450, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(lecturer_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lecturer_edit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 890, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(lecturer_edit, javax.swing.GroupLayout.PREFERRED_SIZE, 890, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -406,7 +391,9 @@ public class lecturer_edit extends javax.swing.JPanel {
 
             JOptionPane.showMessageDialog(this, "Records Are Updated!");
 
-            
+            generator.setemployeeTable();
+            s.close();
+            generator.resetEmpData();
 
         } catch (Exception ex) {
 
@@ -415,14 +402,14 @@ public class lecturer_edit extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_update_lecActionPerformed
 
-    private void jButton15_editlecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15_editlecActionPerformed
+    private void jButton15_15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15_15ActionPerformed
         // TODO add your handling code here:
 
         generator.Parent.removeAll();
         generator.Parent.add(new view_lecturers());
         generator.Parent.repaint();
         generator.Parent.revalidate();
-    }//GEN-LAST:event_jButton15_editlecActionPerformed
+    }//GEN-LAST:event_jButton15_15ActionPerformed
 
     private void leActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leActionPerformed
         // TODO add your handling code here:
@@ -466,7 +453,7 @@ public class lecturer_edit extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_le7ActionPerformed
 
-    private void jButton14_editlecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14_editlecActionPerformed
+    private void jButton14_14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14_14ActionPerformed
         // TODO add your handling code here:
 
         int id = Integer.parseInt(le.getText());
@@ -476,24 +463,26 @@ public class lecturer_edit extends javax.swing.JPanel {
         String rank = level + "." + id;
 
         le7.setText("" + rank);
-    }//GEN-LAST:event_jButton14_editlecActionPerformed
+    }//GEN-LAST:event_jButton14_14ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton14_editlec;
-    private javax.swing.JButton jButton15_editlec;
-    private javax.swing.JLabel jLabel76_editlec;
-    private javax.swing.JLabel jLabel77_editlec;
-    private javax.swing.JLabel jLabel83_editlec;
-    private javax.swing.JLabel jLabel84_editlec;
-    private javax.swing.JLabel jLabel85_editlec;
-    private javax.swing.JLabel jLabel86_editlec;
-    private javax.swing.JLabel jLabel87_editlec;
-    private javax.swing.JLabel jLabel88_editlec;
-    private javax.swing.JLabel jLabel89_editlec;
-    private javax.swing.JPanel jPanel35_editlec;
+    private javax.swing.JButton jButton14_14;
+    private javax.swing.JButton jButton15_15;
+    private javax.swing.JLabel jLabel76_76;
+    private javax.swing.JLabel jLabel77_77;
+    private javax.swing.JLabel jLabel78_78;
+    private javax.swing.JLabel jLabel83_83;
+    private javax.swing.JLabel jLabel84_84;
+    private javax.swing.JLabel jLabel85_85;
+    private javax.swing.JLabel jLabel86_86;
+    private javax.swing.JLabel jLabel87_87;
+    private javax.swing.JLabel jLabel88_88;
+    private javax.swing.JLabel jLabel89_89;
+    private javax.swing.JPanel jPanel26_26;
+    private javax.swing.JPanel jPanel35_35;
     private javax.swing.JScrollPane jScrollPane3_3;
-    private javax.swing.JTable jTable3_editlec;
+    private javax.swing.JTable jTable3_3;
     public javax.swing.JTextField le;
     public javax.swing.JTextField le1;
     public javax.swing.JComboBox<String> le2;
@@ -505,15 +494,4 @@ public class lecturer_edit extends javax.swing.JPanel {
     private javax.swing.JPanel lecturer_edit;
     private javax.swing.JButton update_lec;
     // End of variables declaration//GEN-END:variables
-
-    public void getDetails() {
-        le.setText(empID);
-        le1.setText(name);
-        le2.setSelectedItem(faculty);
-        le3.setSelectedItem(dept);
-        le4.setSelectedItem(center);
-        le5.setSelectedItem(building);
-        le6.setSelectedItem(level);
-        le7.setText(rank);
-    }
 }

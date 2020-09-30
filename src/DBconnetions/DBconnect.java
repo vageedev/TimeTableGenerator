@@ -20,7 +20,7 @@ public class DBconnect {
         
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/timetable", "root", "");
+            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3307/timetable", "root", "123");
         }catch(Exception e){
             System.out.println(e);
             e.printStackTrace();
